@@ -1,7 +1,9 @@
 package Client;
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Hashtable;
+import java.util.Map;
 
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -14,35 +16,28 @@ import org.json.JSONObject;
 import org.apache.http.Header;
 
 public class RestClinet {
-	
-	public void Get(String url) throws ClientProtocolException, IOException {
+
+	//1. GET Method Without Headers: 
+	public CloseableHttpResponse Get(String url) throws ClientProtocolException, IOException {
 		CloseableHttpClient httpClient = HttpClients.createDefault();
 		HttpGet httpGet = new HttpGet(url);
 		CloseableHttpResponse httpResponse = httpClient.execute(httpGet);
+
+		return httpResponse;
+	}
+	
+	//2. GET Method With Headers:
+	public CloseableHttpResponse Get(String url, HashMap<String, String> HeaderMap) throws ClientProtocolException, IOException {
+		CloseableHttpClient httpClient = HttpClients.createDefault();
+		HttpGet httpGet = new HttpGet(url);
 		
-		//Status Code
-		int StatusCode = httpResponse.getStatusLine().getStatusCode();
-		System.out.println("Status code--->>"+StatusCode);
-		
-		//JSON String
-		String responseString = EntityUtils.toString(httpResponse.getEntity(),"UTF-8");
-		JSONObject responseJSON = new JSONObject(responseString);
-		System.out.println("JSON Response from API --->>"+responseJSON);
-		
-		//ALL Headers
-		
-		Header[] headerArray = httpResponse.getAllHeaders();
-		HashMap<String,String> allHeadersMap = new HashMap<String, String>();
-		for(Header header: headerArray) {
-			allHeadersMap.put(header.getName(), header.getValue());
+		for(Map.Entry<String, String> entry : HeaderMap.entrySet()) {
+			httpGet.addHeader(entry.getKey(), entry.getValue());
 		}
-		System.out.println("All Headers Map--->>"+allHeadersMap);
 		
-		Hashtable<String, String> allHeadersTable = new Hashtable<String, String>();
-		for(Header header: headerArray) {
-			allHeadersTable.put(header.getName(), header.getValue());
-		}
-		System.out.println("All Headers Table --->>"+allHeadersTable);
+		CloseableHttpResponse httpResponse = httpClient.execute(httpGet);
+
+		return httpResponse;
 	}
 
 }

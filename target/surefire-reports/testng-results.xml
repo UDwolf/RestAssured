@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Tests.GetAPITest" duration-ms="8" started-at="2022-05-01T16:00:11 EDT" finished-at="2022-05-01T16:00:11 EDT">
+  <suite name="Tests.GetAPITest" duration-ms="1537" started-at="2022-05-01T16:32:31 EDT" finished-at="2022-05-01T16:32:33 EDT">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="8" started-at="2022-05-01T16:00:11 EDT" finished-at="2022-05-01T16:00:11 EDT">
+    <test name="Command line test" duration-ms="1537" started-at="2022-05-01T16:32:31 EDT" finished-at="2022-05-01T16:32:33 EDT">
+      <class name="Tests.GetAPITest">
+        <test-method status="PASS" signature="openURI()[pri:0, instance:Tests.GetAPITest@3c0f93f1]" name="openURI" is-config="true" duration-ms="3" started-at="2022-05-01T16:32:31 EDT" finished-at="2022-05-01T16:32:31 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openURI -->
+        <test-method status="PASS" signature="getAPITest()[pri:0, instance:Tests.GetAPITest@3c0f93f1]" name="getAPITest" duration-ms="1494" started-at="2022-05-01T16:32:31 EDT" finished-at="2022-05-01T16:32:33 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAPITest -->
+      </class> <!-- Tests.GetAPITest -->
     </test> <!-- Command line test -->
   </suite> <!-- Tests.GetAPITest -->
 </testng-results>

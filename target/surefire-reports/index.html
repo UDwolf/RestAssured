@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">0 methods,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Tests_GetAPITest" class="hide-methods passed suite-Tests_GetAPITest"> (hide)</a> <!-- hide-methods passed suite-Tests_GetAPITest -->
+                      <a href="#" panel-name="suite-Tests_GetAPITest" class="show-methods passed suite-Tests_GetAPITest"> (show)</a> <!-- show-methods passed suite-Tests_GetAPITest -->
+                    </span>
+                    <div class="method-list-content passed suite-Tests_GetAPITest">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Tests_GetAPITest" title="Tests.GetAPITest" hash-for-method="getAPITest">getAPITest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Tests_GetAPITest -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -105,6 +119,21 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Tests_GetAPITest" class="panel Tests_GetAPITest">
+          <div class="suite-Tests_GetAPITest-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Tests.GetAPITest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="getAPITest">
+                  </a> <!-- getAPITest -->
+                  <span class="method-name">getAPITest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Tests_GetAPITest-class-passed -->
         </div> <!-- panel Tests_GetAPITest -->
         <div panel-name="test-xml-Tests_GetAPITest" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -156,12 +185,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(0);
+data.addRows(1);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'getAPITest')
+data.setCell(0, 2, 'Tests.GetAPITest')
+data.setCell(0, 3, 1494);
 window.suiteTableData['Tests_GetAPITest']= { tableData: data, tableDiv: 'times-div-Tests_GetAPITest'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-Tests_GetAPITest">
               </div> <!-- times-div-Tests_GetAPITest -->
             </div> <!-- times-div -->
@@ -186,6 +219,16 @@ return data;
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">Tests.GetAPITest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">openURI</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">getAPITest</span>
+                <span class="method-start">5 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

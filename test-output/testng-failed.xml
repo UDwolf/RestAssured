@@ -5,7 +5,7 @@
     <classes>
       <class name="Tests.GetAPITest">
         <methods>
-          <include name="getAPITest"/>
+          <include name="getAPITestWithHeader"/>
           <include name="openURI"/>
         </methods>
       </class> <!-- Tests.GetAPITest -->
